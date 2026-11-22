@@ -1,0 +1,162 @@
+{
+  "model_version": "intent-lr-intents-v2-0a9cbab250",
+  "heldout_version": "intents-heldout-v1",
+  "heldout_size": 43,
+  "model_only": {
+    "macro_f1": 0.912,
+    "accuracy": 0.953,
+    "errors": [
+      {
+        "text": "good afternoon",
+        "gold": "GREETING",
+        "pred": "AGREEMENT"
+      },
+      {
+        "text": "change to 3 units",
+        "gold": "EDIT_ORDER",
+        "pred": "CORRECT_REQUIREMENT"
+      }
+    ]
+  },
+  "hybrid_with_rules": {
+    "macro_f1": 0.94,
+    "accuracy": 0.977,
+    "errors": [
+      {
+        "text": "change to 3 units",
+        "gold": "EDIT_ORDER",
+        "pred": "CORRECT_REQUIREMENT"
+      }
+    ]
+  },
+  "false_order_confirmations": [],
+  "per_class": {
+    "AGREEMENT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "ASK_FOR_HUMAN": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "ASK_PRODUCT_FACT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "CANCEL_OR_STOP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "COMPARE_PRODUCTS": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "CONFIRM_ORDER": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "CORRECT_REQUIREMENT": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1-score": 0.8571428571428571,
+      "support": 3.0
+    },
+    "CUSTOMER_SUPPORT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "DISCOVER_PRODUCT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "EDIT_ORDER": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "EXPRESS_BUYING_INTENT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "GREETING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "OPT_OUT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "RAISE_PRICE_OBJECTION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "REQUEST_DISCOUNT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "REQUEST_FOLLOW_UP": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "REQUEST_QUOTE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "SELECT_PRODUCT_FAMILY": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "STATE_REQUIREMENT": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "accuracy": 0.9767441860465116,
+    "macro avg": {
+      "precision": 0.9342105263157895,
+      "recall": 0.9473684210526315,
+      "f1-score": 0.9398496240601504,
+      "support": 43.0
+    },
+    "weighted avg": {
+      "precision": 0.9593023255813954,
+      "recall": 0.9767441860465116,
+      "f1-score": 0.9667774086378738,
+      "support": 43.0
+    }
+  }
+}

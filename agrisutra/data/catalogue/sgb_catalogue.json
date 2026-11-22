@@ -1,0 +1,825 @@
+{
+  "catalogue_id": "sgb-agro-catalogue",
+  "source_file": "SGB_Agro_Industries_Product_Catalogue_Updated.pdf",
+  "source_pages": 6,
+  "transcribed_from": "SGB_Agro_Industries_Product_Catalogue_Updated.pdf (text extracted and checked page by page; artwork reviewed visually)",
+  "price_effective_date": null,
+  "price_tax_treatment": null,
+  "notes": "Prices are catalogue-listed values transcribed from the PDF. They have no effective date or tax treatment and are not production-approved quotes.",
+  "products": [
+    {
+      "product_id": "BCT-SIDE",
+      "display_name": "SGB Brush Cutter Trolley — Sidepack",
+      "short_name": "Sidepack Trolley",
+      "family": "brush_cutter_trolley_attachment",
+      "aliases": [
+        "sidepack trolley",
+        "side pack trolley",
+        "sidepack trolly",
+        "side pack trolly",
+        "brush cutter trolley sidepack",
+        "sidepack attachment"
+      ],
+      "price": {
+        "amount": 3800,
+        "currency": "INR",
+        "unit": "each",
+        "effective_from": null,
+        "effective_to": null,
+        "approval_status": "SOURCE_TRANSCRIBED_NOT_PRODUCTION_APPROVED",
+        "source": {
+          "page": 1,
+          "location": "price label"
+        }
+      },
+      "facts": {
+        "product_type": {
+          "label": "Product type",
+          "value": "trolley attachment for an existing brush cutter",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "product description"
+          }
+        },
+        "construction": {
+          "label": "Construction",
+          "value": "heavy-duty mild steel",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "product description"
+          }
+        },
+        "wheel_design": {
+          "label": "Wheel design",
+          "value": "dual-wheel guiding trolley",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "product description"
+          }
+        },
+        "configuration": {
+          "label": "Brush cutter configuration",
+          "value": "sidepack",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "product title"
+          }
+        },
+        "operation": {
+          "label": "Operation",
+          "value": "converts a sidepack brush cutter to push-type operation",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "product description"
+          }
+        },
+        "benefit": {
+          "label": "Benefit",
+          "value": "reduces the need to carry the machine while operating",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "key features"
+          }
+        }
+      },
+      "observations": [
+        {
+          "field": "exact_fitment",
+          "value": "universal brush cutter trolley",
+          "status": "UNVERIFIED_MARKETING_KEYWORD",
+          "source": {
+            "page": 1,
+            "location": "SEO tags"
+          },
+          "note": "The SEO tags say \"universal brush cutter trolley\", but that is a marketing tag, not a make/model fitment table.",
+          "qualitative_only": true
+        }
+      ],
+      "not_stated": [
+        "warranty",
+        "exact_fitment",
+        "dimensions",
+        "weight",
+        "stock",
+        "delivery",
+        "discount",
+        "gst",
+        "payment"
+      ]
+    },
+    {
+      "product_id": "BCT-BACK",
+      "display_name": "SGB Brush Cutter Trolley — Backpack",
+      "short_name": "Backpack Trolley",
+      "family": "brush_cutter_trolley_attachment",
+      "aliases": [
+        "backpack trolley",
+        "back pack trolley",
+        "backpack trolly",
+        "back pack trolly",
+        "brush cutter trolley backpack",
+        "backpack attachment"
+      ],
+      "price": {
+        "amount": 4300,
+        "currency": "INR",
+        "unit": "each",
+        "effective_from": null,
+        "effective_to": null,
+        "approval_status": "SOURCE_TRANSCRIBED_NOT_PRODUCTION_APPROVED",
+        "source": {
+          "page": 1,
+          "location": "price label"
+        }
+      },
+      "facts": {
+        "product_type": {
+          "label": "Product type",
+          "value": "trolley attachment for an existing brush cutter",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "product description"
+          }
+        },
+        "construction": {
+          "label": "Construction",
+          "value": "heavy-duty mild steel",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "product description"
+          }
+        },
+        "wheel_design": {
+          "label": "Wheel design",
+          "value": "dual-wheel guiding trolley",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "product description"
+          }
+        },
+        "configuration": {
+          "label": "Brush cutter configuration",
+          "value": "backpack",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "product title"
+          }
+        },
+        "operation": {
+          "label": "Operation",
+          "value": "converts a backpack brush cutter to push-type operation",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "product description"
+          }
+        },
+        "benefit": {
+          "label": "Benefit",
+          "value": "reduces the need to carry the machine while operating",
+          "status": "APPROVED",
+          "source": {
+            "page": 1,
+            "location": "key features"
+          }
+        }
+      },
+      "observations": [
+        {
+          "field": "exact_fitment",
+          "value": "universal brush cutter trolley",
+          "status": "UNVERIFIED_MARKETING_KEYWORD",
+          "source": {
+            "page": 1,
+            "location": "SEO tags"
+          },
+          "note": "The SEO tags say \"universal brush cutter trolley\", but that is a marketing tag, not a make/model fitment table.",
+          "qualitative_only": true
+        }
+      ],
+      "not_stated": [
+        "warranty",
+        "exact_fitment",
+        "dimensions",
+        "weight",
+        "stock",
+        "delivery",
+        "discount",
+        "gst",
+        "payment"
+      ]
+    },
+    {
+      "product_id": "WB-DUMPER",
+      "display_name": "SGB Dumper Wheel Barrow",
+      "short_name": "Dumper Wheel Barrow",
+      "family": "wheel_barrow",
+      "aliases": [
+        "dumper wheel barrow",
+        "dumper wheelbarrow",
+        "dumper barrow",
+        "tipping wheel barrow",
+        "tipper wheel barrow",
+        "dumper"
+      ],
+      "price": {
+        "amount": 8500,
+        "currency": "INR",
+        "unit": "each",
+        "effective_from": null,
+        "effective_to": null,
+        "approval_status": "SOURCE_TRANSCRIBED_NOT_PRODUCTION_APPROVED",
+        "source": {
+          "page": 2,
+          "location": "price label"
+        }
+      },
+      "facts": {
+        "construction": {
+          "label": "Construction",
+          "value": "heavy-duty",
+          "status": "APPROVED",
+          "source": {
+            "page": 2,
+            "location": "product description"
+          }
+        },
+        "tipping_mechanism": {
+          "label": "Tipping mechanism",
+          "value": "dumper / tipping mechanism",
+          "status": "APPROVED",
+          "source": {
+            "page": 2,
+            "location": "product description"
+          }
+        },
+        "wheel_design": {
+          "label": "Wheel design",
+          "value": "stable wheel support",
+          "status": "APPROVED",
+          "source": {
+            "page": 2,
+            "location": "product description"
+          }
+        },
+        "described_uses": {
+          "label": "Described uses",
+          "value": "soil, manure, farm produce and construction materials",
+          "status": "APPROVED",
+          "source": {
+            "page": 2,
+            "location": "product description"
+          }
+        }
+      },
+      "observations": [
+        {
+          "field": "load_capacity",
+          "value": "high load capacity",
+          "status": "UNVERIFIED_MARKETING_KEYWORD",
+          "source": {
+            "page": 2,
+            "location": "SEO tags"
+          },
+          "note": "The SEO tags say \"high load capacity\", but no load figure is given.",
+          "qualitative_only": true
+        }
+      ],
+      "not_stated": [
+        "capacity",
+        "load_capacity",
+        "dimensions",
+        "weight",
+        "warranty",
+        "stock",
+        "delivery",
+        "discount",
+        "gst",
+        "payment"
+      ]
+    },
+    {
+      "product_id": "WB-NORMAL",
+      "display_name": "SGB Normal Wheel Barrow",
+      "short_name": "Normal Wheel Barrow",
+      "family": "wheel_barrow",
+      "aliases": [
+        "normal wheel barrow",
+        "normal wheelbarrow",
+        "standard wheel barrow",
+        "standard wheelbarrow",
+        "regular wheel barrow",
+        "simple wheel barrow"
+      ],
+      "price": {
+        "amount": 7500,
+        "currency": "INR",
+        "unit": "each",
+        "effective_from": null,
+        "effective_to": null,
+        "approval_status": "SOURCE_TRANSCRIBED_NOT_PRODUCTION_APPROVED",
+        "source": {
+          "page": 3,
+          "location": "price label"
+        }
+      },
+      "facts": {
+        "construction": {
+          "label": "Construction",
+          "value": "strong frame",
+          "status": "APPROVED",
+          "source": {
+            "page": 3,
+            "location": "product description"
+          }
+        },
+        "tipping_mechanism": {
+          "label": "Tipping mechanism",
+          "value": "standard wheel barrow (the catalogue offers the dumper mechanism as a separate variant)",
+          "status": "APPROVED",
+          "negative": true,
+          "source": {
+            "page": 3,
+            "location": "product title / variant distinction"
+          }
+        },
+        "wheel_design": {
+          "label": "Wheel design",
+          "value": "balanced wheel design",
+          "status": "APPROVED",
+          "source": {
+            "page": 3,
+            "location": "product description"
+          }
+        },
+        "described_uses": {
+          "label": "Described uses",
+          "value": "agricultural materials, construction supplies and farm produce",
+          "status": "APPROVED",
+          "source": {
+            "page": 3,
+            "location": "product description"
+          }
+        }
+      },
+      "observations": [
+        {
+          "field": "capacity",
+          "value": "95 litre",
+          "status": "UNVERIFIED_MARKETING_KEYWORD",
+          "source": {
+            "page": 3,
+            "location": "SEO tags (not the specification table)"
+          },
+          "note": "\"95 litre\" appears only in the page 3 SEO tags. It needs SGB approval before it can be stated as the capacity."
+        },
+        {
+          "field": "rust_resistance",
+          "value": "rust resistant",
+          "status": "UNVERIFIED_MARKETING_KEYWORD",
+          "source": {
+            "page": 3,
+            "location": "SEO tags"
+          },
+          "note": "\"Rust resistant\" appears only in the SEO tags, not the specification."
+        }
+      ],
+      "not_stated": [
+        "load_capacity",
+        "dimensions",
+        "weight",
+        "warranty",
+        "stock",
+        "delivery",
+        "discount",
+        "gst",
+        "payment"
+      ]
+    },
+    {
+      "product_id": "VARSHA-TROLLEY",
+      "display_name": "SGB Varsha Brush Cutter with Trolley",
+      "short_name": "Varsha Brush Cutter with Trolley",
+      "family": "brush_cutter_machine",
+      "aliases": [
+        "varsha",
+        "varsha brush cutter",
+        "varsha trolley",
+        "brush cutter with trolley",
+        "push type brush cutter",
+        "trolley brush cutter"
+      ],
+      "price": {
+        "amount": 14000,
+        "currency": "INR",
+        "unit": "each",
+        "effective_from": null,
+        "effective_to": null,
+        "approval_status": "SOURCE_TRANSCRIBED_NOT_PRODUCTION_APPROVED",
+        "source": {
+          "page": 4,
+          "location": "price label"
+        }
+      },
+      "facts": {
+        "product_type": {
+          "label": "Product type",
+          "value": "complete brush cutter supplied with a push-type trolley",
+          "status": "APPROVED",
+          "source": {
+            "page": 4,
+            "location": "product title"
+          }
+        },
+        "configuration": {
+          "label": "Configuration",
+          "value": "push-type trolley",
+          "status": "APPROVED",
+          "source": {
+            "page": 4,
+            "location": "specification table"
+          }
+        },
+        "engine_displacement": {
+          "label": "Engine displacement",
+          "value": "52 cc",
+          "status": "APPROVED",
+          "source": {
+            "page": 4,
+            "location": "specification table"
+          }
+        },
+        "power": {
+          "label": "Power",
+          "value": "2.1 HP",
+          "status": "APPROVED",
+          "source": {
+            "page": 4,
+            "location": "specification table"
+          }
+        },
+        "run_time": {
+          "label": "Running time",
+          "value": "1.5 hours",
+          "status": "APPROVED",
+          "qualifier": "as provided",
+          "source": {
+            "page": 4,
+            "location": "specification table"
+          },
+          "note": "Marked \"as provided\". The catalogue gives no test method, fuel quantity or duty cycle, so this is not a guaranteed runtime."
+        },
+        "engine_warranty": {
+          "label": "Engine warranty",
+          "value": "no engine warranty",
+          "months": 0,
+          "status": "APPROVED",
+          "source": {
+            "page": 4,
+            "location": "specification table"
+          }
+        },
+        "described_uses": {
+          "label": "Described uses",
+          "value": "grass and weed cutting across agricultural areas",
+          "status": "APPROVED",
+          "source": {
+            "page": 4,
+            "location": "product description"
+          }
+        }
+      },
+      "observations": [
+        {
+          "field": "engine_type",
+          "value": "2 stroke",
+          "status": "ARTWORK_ONLY_NEEDS_APPROVAL",
+          "source": {
+            "page": 4,
+            "location": "product artwork (specification panel)"
+          },
+          "note": "The artwork panel says 2 stroke, but the text specification table on p.4 does not list the engine type."
+        },
+        {
+          "field": "accessories",
+          "value": "tool kit, 40-teeth blade, aluminium tap & go, tap & go head, 3.5 mm rope, goggles, rectangular blade, trolley",
+          "status": "ARTWORK_ONLY_NEEDS_APPROVAL",
+          "source": {
+            "page": 4,
+            "location": "product artwork (accessories included)"
+          },
+          "note": "The page says \"accessory set shown in the product image\"; the exact contents are only in the artwork and need SGB confirmation."
+        },
+        {
+          "field": "wheel_size",
+          "value": "spoke 20",
+          "status": "ARTWORK_ONLY_NEEDS_APPROVAL",
+          "source": {
+            "page": 4,
+            "location": "product artwork (specification panel)"
+          },
+          "note": "Shown only in the artwork specification panel."
+        }
+      ],
+      "not_stated": [
+        "engine_type",
+        "carburetor",
+        "weight",
+        "fuel_tank",
+        "stock",
+        "delivery",
+        "discount",
+        "gst",
+        "payment"
+      ]
+    },
+    {
+      "product_id": "143R-STABLE",
+      "display_name": "SGB 143R Stable Brush Cutter (GL 45)",
+      "short_name": "143R Stable (GL 45)",
+      "family": "brush_cutter_machine",
+      "aliases": [
+        "143r stable",
+        "143 r stable",
+        "gl 45",
+        "gl45 stable",
+        "stable brush cutter",
+        "stable carburetor brush cutter"
+      ],
+      "price": {
+        "amount": 16000,
+        "currency": "INR",
+        "unit": "each",
+        "effective_from": null,
+        "effective_to": null,
+        "approval_status": "SOURCE_TRANSCRIBED_NOT_PRODUCTION_APPROVED",
+        "source": {
+          "page": 5,
+          "location": "price label"
+        }
+      },
+      "facts": {
+        "product_type": {
+          "label": "Product type",
+          "value": "brush cutter machine",
+          "status": "APPROVED",
+          "source": {
+            "page": 5,
+            "location": "product title"
+          }
+        },
+        "engine_type": {
+          "label": "Engine type",
+          "value": "2-stroke",
+          "status": "APPROVED",
+          "source": {
+            "page": 5,
+            "location": "specification table"
+          }
+        },
+        "model": {
+          "label": "Model",
+          "value": "GL 45",
+          "status": "APPROVED",
+          "source": {
+            "page": 5,
+            "location": "specification table"
+          }
+        },
+        "power": {
+          "label": "Power",
+          "value": "2.1 HP",
+          "status": "APPROVED",
+          "source": {
+            "page": 5,
+            "location": "specification table"
+          }
+        },
+        "carburetor": {
+          "label": "Carburetor",
+          "value": "stable carburetor",
+          "status": "APPROVED",
+          "source": {
+            "page": 5,
+            "location": "specification table"
+          }
+        },
+        "engine_warranty": {
+          "label": "Engine warranty",
+          "value": "6 months",
+          "months": 6,
+          "status": "APPROVED",
+          "source": {
+            "page": 5,
+            "location": "specification table"
+          }
+        },
+        "described_uses": {
+          "label": "Described uses",
+          "value": "agricultural cutting during demanding farm work",
+          "status": "APPROVED",
+          "source": {
+            "page": 5,
+            "location": "product description"
+          }
+        },
+        "carburetor_benefit": {
+          "label": "Carburetor design intent",
+          "value": "consistent engine performance, smooth idling, easy starting and improved fuel efficiency",
+          "status": "APPROVED",
+          "qualifier": "manufacturer description",
+          "source": {
+            "page": 5,
+            "location": "product description"
+          }
+        }
+      },
+      "observations": [
+        {
+          "field": "engine_displacement",
+          "value": "43 cc",
+          "status": "SOURCE_CONFLICT_NEEDS_APPROVAL",
+          "source": {
+            "page": 5,
+            "location": "product artwork"
+          },
+          "note": "The product artwork shows \"43 cc\", but the specification table does not list an engine capacity. SGB needs to confirm it."
+        },
+        {
+          "field": "push_trolley",
+          "value": "machine shown mounted on a push trolley",
+          "status": "ARTWORK_ONLY_NEEDS_APPROVAL",
+          "source": {
+            "page": 5,
+            "location": "product artwork"
+          },
+          "note": "The artwork shows this machine on a push trolley, but the specification table does not list a trolley. SGB needs to confirm whether a trolley is included."
+        }
+      ],
+      "not_stated": [
+        "run_time",
+        "weight",
+        "fuel_tank",
+        "stock",
+        "delivery",
+        "discount",
+        "gst",
+        "payment"
+      ]
+    },
+    {
+      "product_id": "143R-WALBRO",
+      "display_name": "SGB 143R WALBRO Brush Cutter (GL45 143R)",
+      "short_name": "143R WALBRO (GL45 143R)",
+      "family": "brush_cutter_machine",
+      "aliases": [
+        "143r walbro",
+        "143 r walbro",
+        "walbro",
+        "walbro brush cutter",
+        "gl45 143r",
+        "walbro carburetor brush cutter"
+      ],
+      "price": {
+        "amount": 21000,
+        "currency": "INR",
+        "unit": "each",
+        "effective_from": null,
+        "effective_to": null,
+        "approval_status": "SOURCE_TRANSCRIBED_NOT_PRODUCTION_APPROVED",
+        "source": {
+          "page": 6,
+          "location": "price label"
+        }
+      },
+      "facts": {
+        "product_type": {
+          "label": "Product type",
+          "value": "brush cutter machine",
+          "status": "APPROVED",
+          "source": {
+            "page": 6,
+            "location": "product title"
+          }
+        },
+        "engine_type": {
+          "label": "Engine type",
+          "value": "2-stroke",
+          "status": "APPROVED",
+          "source": {
+            "page": 6,
+            "location": "specification table"
+          }
+        },
+        "model": {
+          "label": "Model",
+          "value": "GL45 143R",
+          "status": "APPROVED",
+          "source": {
+            "page": 6,
+            "location": "specification table"
+          }
+        },
+        "power": {
+          "label": "Power",
+          "value": "2.1 HP",
+          "status": "APPROVED",
+          "source": {
+            "page": 6,
+            "location": "specification table"
+          }
+        },
+        "carburetor": {
+          "label": "Carburetor",
+          "value": "WALBRO carburetor",
+          "status": "APPROVED",
+          "source": {
+            "page": 6,
+            "location": "specification table"
+          }
+        },
+        "engine_warranty": {
+          "label": "Engine warranty",
+          "value": "1 year",
+          "months": 12,
+          "status": "APPROVED",
+          "source": {
+            "page": 6,
+            "location": "specification table"
+          }
+        },
+        "run_time": {
+          "label": "Running time",
+          "value": "3 hours",
+          "status": "APPROVED",
+          "qualifier": "as provided",
+          "source": {
+            "page": 6,
+            "location": "specification table"
+          },
+          "note": "Marked \"as provided\". The catalogue gives no test method, fuel quantity or duty cycle, so this is not a guaranteed runtime."
+        },
+        "described_uses": {
+          "label": "Described uses",
+          "value": "agricultural grass and weed cutting",
+          "status": "APPROVED",
+          "source": {
+            "page": 6,
+            "location": "product description"
+          }
+        }
+      },
+      "observations": [
+        {
+          "field": "engine_displacement",
+          "value": "43 cc",
+          "status": "SOURCE_CONFLICT_NEEDS_APPROVAL",
+          "source": {
+            "page": 6,
+            "location": "product artwork"
+          },
+          "note": "The product artwork shows \"43 cc\", but the specification table does not list an engine capacity. SGB needs to confirm it."
+        },
+        {
+          "field": "push_trolley",
+          "value": "machine shown mounted on a push trolley",
+          "status": "ARTWORK_ONLY_NEEDS_APPROVAL",
+          "source": {
+            "page": 6,
+            "location": "product artwork"
+          },
+          "note": "The artwork shows this machine on a push trolley, but the specification table does not list a trolley. SGB needs to confirm whether a trolley is included."
+        },
+        {
+          "field": "artwork_label",
+          "value": "artwork headline reads \"SGB 143R STABLE\" and spells \"WALLBRO\"",
+          "status": "SOURCE_CONFLICT_NEEDS_APPROVAL",
+          "source": {
+            "page": 6,
+            "location": "product artwork"
+          },
+          "note": "The p.6 artwork is labelled \"SGB 143R STABLE\" although the page describes the WALBRO model. SGB should correct the artwork."
+        }
+      ],
+      "not_stated": [
+        "weight",
+        "fuel_tank",
+        "stock",
+        "delivery",
+        "discount",
+        "gst",
+        "payment"
+      ]
+    }
+  ]
+}

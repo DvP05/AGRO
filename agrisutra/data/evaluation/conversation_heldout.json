@@ -1,0 +1,27 @@
+{
+  "version": "conversation-v1",
+  "description": "General conversational messages (no product named). Round 1 was used while building app/dialogue/conversation.py; round 2 was written afterwards and run once before any fix.",
+  "first_seen_results": {
+    "round_1_before_layer": "2 of 30 got a relevant reply; 28 got the same 'Which product are you looking for' menu question, and 'thanks' closed the enquiry",
+    "round_2_unseen": "13 of 20 on first sight; 20 of 20 after the fixes (weak model guesses no longer override acts, 'are you a real person?' is a question, crop + farm is a vague need, weed-problem phrasing infers a brush cutter)",
+    "round_3_questions_unseen": "9 of 15 on first sight after building app/dialogue/answers.py and app/sales/checkout.py; 15 of 15 after the fixes (bare variant words like 'the stable one' / 'the normal barrow' now pick the right product, 'how many hours', 'come with wheels', 'supplied with a trolley', and family-member ease questions)"
+  },
+  "round_3": [
+    "will the stable one work for clearing bushes?", "which wheel barrow carries the most",
+    "is the backpack trolley good for a stihl", "which brush cutter has the best warranty?",
+    "can my father who is 65 use the varsha", "is the normal barrow ok for carrying bricks?",
+    "i need something that runs all day for my coconut plantation", "send me 1 walbro and 2 normal wheel barrows",
+    "i want 2 varsha → confirm order → Anil Kumar, Davangere → is my order confirmed?",
+    "how many hours does the walbro work", "does the varsha come with wheels", "which is more powerful, walbro or stable",
+    "what's the warranty and running time of the stable", "can the dumper carry wet cement",
+    "suggest me a cutter for my 10 acre farm"
+  ],
+  "round_2": [
+    "hey there, how's it going", "are you a real person?", "what all do you guys make", "thank you so much",
+    "ok bye", "which one is the most expensive", "i have a coconut farm", "can i pay cash on delivery",
+    "do you have spare parts", "i need a tractor", "the weeds in my orchard are out of control",
+    "is the walbro one worth the money?", "kya haal hai", "help", "suggest something for my land",
+    "what's your best seller", "is it available now", "nice, very helpful", "can you ship to pune",
+    "i need to shift bricks at my construction site"
+  ]
+}

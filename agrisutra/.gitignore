@@ -9,3 +9,6 @@ data/catalogue/private/
 venv/
 node_modules/
 dist/
+
+# Personal Claude Code settings
+.claude/settings.local.json

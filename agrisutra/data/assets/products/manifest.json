@@ -1,0 +1,118 @@
+{
+  "source_file": "SGB_Agro_Industries_Product_Catalogue_Updated.pdf",
+  "source_sha256": "6c508fd73e08595dc864e3d29d5ba0cfeb3c2c9172d40b03a7091eb0895d3823",
+  "images": {
+    "BCT-SIDE": {
+      "asset": "assets/products/BCT-SIDE.jpg",
+      "page": 1,
+      "embedded_name": "Image23.jpg",
+      "embedded_index": 0,
+      "original_size": [
+        644,
+        644
+      ],
+      "size": [
+        644,
+        644
+      ],
+      "sha256": "3c1314b9e6f9cb0492e7fdcbd79f6d2828d83c0c7f9d27afacaf4042c0b0aa44",
+      "status": "EXTRACTED"
+    },
+    "BCT-BACK": {
+      "asset": "assets/products/BCT-BACK.jpg",
+      "page": 1,
+      "embedded_name": "Image24.jpg",
+      "embedded_index": 1,
+      "original_size": [
+        641,
+        641
+      ],
+      "size": [
+        641,
+        641
+      ],
+      "sha256": "59aaae1093c374c29f2e8a456e4a0fdc0b460cfad7be1cfed68ac6220e636b8b",
+      "status": "EXTRACTED"
+    },
+    "WB-DUMPER": {
+      "asset": "assets/products/WB-DUMPER.jpg",
+      "page": 2,
+      "embedded_name": "Image27.jpg",
+      "embedded_index": 0,
+      "original_size": [
+        784,
+        784
+      ],
+      "size": [
+        784,
+        784
+      ],
+      "sha256": "15c57e82830894b9a0e6164cde4263a40f7a91b0309c3565a68e9d6da29873a9",
+      "status": "EXTRACTED"
+    },
+    "WB-NORMAL": {
+      "asset": "assets/products/WB-NORMAL.jpg",
+      "page": 3,
+      "embedded_name": "Image30.jpg",
+      "embedded_index": 0,
+      "original_size": [
+        733,
+        733
+      ],
+      "size": [
+        733,
+        733
+      ],
+      "sha256": "d3e86e6ff1cbc8117b80076b073a5da687e270fd4f0b17aa38ee6299ff420a07",
+      "status": "EXTRACTED"
+    },
+    "VARSHA-TROLLEY": {
+      "asset": "assets/products/VARSHA-TROLLEY.jpg",
+      "page": 4,
+      "embedded_name": "FormXob.cead82b42bab01239f76d50f5aaf1d23.jpg",
+      "embedded_index": 0,
+      "original_size": [
+        904,
+        1280
+      ],
+      "size": [
+        636,
+        900
+      ],
+      "sha256": "6645851d15dba7d53fdacfc7e266eb791a21e8685d0f5b7d3a68a331797ce9d9",
+      "status": "EXTRACTED"
+    },
+    "143R-STABLE": {
+      "asset": "assets/products/143R-STABLE.jpg",
+      "page": 5,
+      "embedded_name": "FormXob.6a856ee2ebc56c05d148c6ef1e84dcb1.jpg",
+      "embedded_index": 0,
+      "original_size": [
+        1080,
+        1080
+      ],
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "d66aa13c5ef84749278c142d9a05fd03599d355e8e9fd7200d647ae8ab08c3e8",
+      "status": "EXTRACTED"
+    },
+    "143R-WALBRO": {
+      "asset": "assets/products/143R-WALBRO.jpg",
+      "page": 6,
+      "embedded_name": "FormXob.aa912e51c648c3511d93d870e9f7f2c0.jpg",
+      "embedded_index": 0,
+      "original_size": [
+        1254,
+        1254
+      ],
+      "size": [
+        900,
+        900
+      ],
+      "sha256": "d74d6d8c048f6b3c405cdaccc1588a56670cbfb94af1eb802add93ddea6b4364",
+      "status": "EXTRACTED"
+    }
+  }
+}
