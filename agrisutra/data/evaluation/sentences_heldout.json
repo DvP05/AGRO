@@ -1,0 +1,386 @@
+{
+  "version": "sentences-heldout-v2",
+  "note": "Natural multi-clause customer sentences, written separately from training data. Each conversation is run through the full dialogue manager; 'expect' lists the slots that must be captured and optional product/next-action checks.",
+  "cases": [
+    {
+      "turns": [
+        "We are building a house and I need to move bricks and gravel from the gate to the site"
+      ],
+      "expect": {
+        "product_family": "wheel_barrow"
+      }
+    },
+    {
+      "turns": [
+        "I keep cows and want an easier way to take dung to the compost pit"
+      ],
+      "expect": {
+        "product_family": "wheel_barrow"
+      }
+    },
+    {
+      "turns": [
+        "My banana plantation is full of weeds, I need something to cut them down"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine"
+      }
+    },
+    {
+      "turns": [
+        "Looking for a tool to trim the overgrown bushes around my farmhouse"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine"
+      }
+    },
+    {
+      "turns": [
+        "I use a Stihl cutter that straps on my back and my shoulders hurt, can I get wheels for it?"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_trolley_attachment",
+        "trolley_configuration": "backpack"
+      },
+      "top": "BCT-BACK"
+    },
+    {
+      "turns": [
+        "My brush cutter is the side hanging type, I want a trolley for it"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_trolley_attachment",
+        "trolley_configuration": "sidepack"
+      },
+      "top": "BCT-SIDE"
+    },
+    {
+      "turns": [
+        "I need a wheelbarow that empties easily when I tilt it"
+      ],
+      "expect": {
+        "product_family": "wheel_barrow",
+        "dumper_required": true
+      },
+      "top": "WB-DUMPER"
+    },
+    {
+      "turns": [
+        "A plain barrow will do, no need for the dumper type"
+      ],
+      "expect": {
+        "product_family": "wheel_barrow",
+        "dumper_required": false
+      },
+      "top": "WB-NORMAL"
+    },
+    {
+      "turns": [
+        "I want a brush cutter but I can only spend 15k"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine",
+        "budget": 15000
+      },
+      "top": "VARSHA-TROLLEY"
+    },
+    {
+      "turns": [
+        "Which brush cutter do you have with a one year engine warranty?"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine",
+        "warranty_min_months": 12
+      },
+      "top": "143R-WALBRO"
+    },
+    {
+      "turns": [
+        "Give me the brush cutter that has the best warranty"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine",
+        "warranty_preference": "longest"
+      },
+      "top": "143R-WALBRO"
+    },
+    {
+      "turns": [
+        "I need a brush cutter",
+        "honestly I would prefer to push it on a trolley instead of carrying it"
+      ],
+      "expect": {
+        "needs_push_trolley": true
+      },
+      "top": "VARSHA-TROLLEY"
+    },
+    {
+      "turns": [
+        "I need a brush cutter",
+        "warranty is not that important to me"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine"
+      },
+      "not_asked": "warranty_min_months"
+    },
+    {
+      "turns": [
+        "I'm after a brush cutter trolley",
+        "I don't have any machine right now, so I need everything"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine",
+        "needs_push_trolley": true
+      },
+      "top": "VARSHA-TROLLEY"
+    },
+    {
+      "turns": [
+        "I'm after a brush cutter trolley",
+        "I already own one, the back pack kind"
+      ],
+      "expect": {
+        "trolley_configuration": "backpack"
+      },
+      "top": "BCT-BACK"
+    },
+    {
+      "turns": [
+        "I need a wheel barrow",
+        "it has to tip over easily, I dump soil all day"
+      ],
+      "expect": {
+        "dumper_required": true
+      },
+      "top": "WB-DUMPER"
+    },
+    {
+      "turns": [
+        "I need a wheel barrow",
+        "on second thought the dumper one would be better for me"
+      ],
+      "expect": {
+        "dumper_required": true
+      },
+      "top": "WB-DUMPER"
+    },
+    {
+      "turns": [
+        "Budget is around 4 thousand and my cutter is sidepack"
+      ],
+      "expect": {
+        "budget": 4000,
+        "trolley_configuration": "sidepack"
+      },
+      "top": "BCT-SIDE"
+    },
+    {
+      "turns": [
+        "What would the normal barrow cost me?"
+      ],
+      "intent": "ASK_PRODUCT_FACT"
+    },
+    {
+      "turns": [
+        "Can the normal barrow handle 80 kg of cement?"
+      ],
+      "intent": "ASK_PRODUCT_FACT"
+    },
+    {
+      "turns": [
+        "How do your two brush cutter trolleys differ?"
+      ],
+      "intent": "COMPARE_PRODUCTS"
+    },
+    {
+      "turns": [
+        "Is it worth paying more for the walbro over the stable model?"
+      ],
+      "intent": "COMPARE_PRODUCTS"
+    },
+    {
+      "turns": [
+        "Please book 2 of the dumper barrows for my farm"
+      ],
+      "expect": {
+        "quantity": 2
+      },
+      "intent": "EXPRESS_BUYING_INTENT"
+    },
+    {
+      "turns": [
+        "mujhe ghaas kaatne ke liye machine chahiye"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine"
+      }
+    },
+    {
+      "turns": [
+        "reti aur cement uthane ke liye kuch chahiye"
+      ],
+      "expect": {
+        "product_family": "wheel_barrow"
+      }
+    },
+    {
+      "turns": [
+        "looking for a brushcuter with warrenty"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine",
+        "warranty_min_months": 1
+      }
+    },
+    {
+      "turns": [
+        "The weeds have grown too much near my borewell, any machine for that?"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine"
+      }
+    },
+    {
+      "turns": [
+        "My price limit is 9000 and I need tipping for unloading sand"
+      ],
+      "expect": {
+        "budget": 9000,
+        "dumper_required": true
+      },
+      "top": "WB-DUMPER"
+    },
+    {
+      "turns": [
+        "I have a 3 acre farm and want a brush cutter"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine"
+      },
+      "not_slot": "trolley_configuration"
+    },
+    {
+      "turns": [
+        "I don't have a budget in mind, I just need a wheel barrow"
+      ],
+      "expect": {
+        "product_family": "wheel_barrow"
+      },
+      "not_slot": "need_type"
+    },
+    {
+      "turns": [
+        "We run a small nursery and need to wheel pots of soil and compost around"
+      ],
+      "expect": {
+        "product_family": "wheel_barrow"
+      }
+    },
+    {
+      "turns": [
+        "The area around my well is covered in thick shrubs and I want to clean it up"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine"
+      }
+    },
+    {
+      "turns": [
+        "I got a Husqvarna side-slung cutter, is there a trolley I can attach to it?"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_trolley_attachment",
+        "trolley_configuration": "sidepack"
+      },
+      "top": "BCT-SIDE"
+    },
+    {
+      "turns": [
+        "My cutter has a harness that goes on my back, I'd like to roll it instead"
+      ],
+      "expect": {
+        "trolley_configuration": "backpack"
+      },
+      "top": "BCT-BACK"
+    },
+    {
+      "turns": [
+        "Show me a barrow, I don't need anything fancy, the regular model is enough"
+      ],
+      "expect": {
+        "product_family": "wheel_barrow",
+        "dumper_required": false
+      },
+      "top": "WB-NORMAL"
+    },
+    {
+      "turns": [
+        "I want a grass cutting machine for under 17 thousand rupees"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine",
+        "budget": 17000
+      }
+    },
+    {
+      "turns": [
+        "I need a brush cutter",
+        "6 months of warranty is the minimum I'd accept"
+      ],
+      "expect": {
+        "warranty_min_months": 6
+      }
+    },
+    {
+      "turns": [
+        "I need a wheel barrow",
+        "something that can tip the load out quickly"
+      ],
+      "expect": {
+        "dumper_required": true
+      },
+      "top": "WB-DUMPER"
+    },
+    {
+      "turns": [
+        "Which barrow should I pick for carrying manure, the normal or the dumper?"
+      ],
+      "intent": "COMPARE_PRODUCTS"
+    },
+    {
+      "turns": [
+        "How heavy is the varsha machine?"
+      ],
+      "intent": "ASK_PRODUCT_FACT"
+    },
+    {
+      "turns": [
+        "I'd like to order 4 sidepack trolleys please"
+      ],
+      "expect": {
+        "quantity": 4
+      },
+      "intent": "EXPRESS_BUYING_INTENT"
+    },
+    {
+      "turns": [
+        "bhai jhadi kaatne wali machine dikhao"
+      ],
+      "expect": {
+        "product_family": "brush_cutter_machine"
+      }
+    }
+  ],
+  "first_seen_results": {
+    "batch_1": {
+      "cases": 30,
+      "passed_before_fixes": 25
+    },
+    "batch_2": {
+      "cases": 12,
+      "passed_before_fixes": 9
+    },
+    "note": "Each batch was written before looking at the system's behaviour on it. Failures were then fixed with general patterns, so these cases are now regression tests; first-seen accuracy is the honest generalisation figure."
+  }
+}

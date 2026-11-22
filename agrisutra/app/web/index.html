@@ -3,85 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriSutra — Evidence-First AI Sales Agent</title>
-    <meta name="description" content="AgriSutra: AI-powered agricultural sales assistant with evidence-backed recommendations">
+    <title>AgriSutra — Evidence-First Sales Cockpit</title>
+    <meta name="description" content="AgriSutra: catalogue-grounded sales assistant for SGB Agro Industries with Truth Receipts and Decision Replay">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <!-- ── Top Navigation ─────────────────────────────────── -->
     <nav class="top-nav">
         <div class="nav-brand">
             <span class="brand-icon">🌱</span>
             <span class="brand-text">AgriSutra</span>
-            <span class="brand-tag">Evidence-First AI Sales Agent</span>
+            <span class="brand-tag">SGB Agro · Evidence-First Sales</span>
         </div>
         <div class="nav-status">
+            <div class="mobile-pane-toggle" id="mobilePaneToggle">
+                <button class="btn-pane-toggle active" id="btnToggleChat" data-pane="chat">💬 Chat</button>
+                <button class="btn-pane-toggle" id="btnToggleBrain" data-pane="brain">🧠 Cockpit</button>
+            </div>
+            <span class="mode-chip" title="Challenge mode: browser simulator, local models, mock orders only">MOCK MODE</span>
+            <span class="flag-chip flag-paused" id="flagPaused" hidden>BOT PAUSED</span>
+            <span class="flag-chip flag-optout" id="flagOptOut" hidden>OPTED OUT</span>
             <div class="status-chip" id="leadStatusChip">
                 <span class="status-dot"></span>
                 <span id="leadStatusText">NEW</span>
             </div>
-            <div class="session-info">
-                <span id="sessionIdDisplay">No Session</span>
-            </div>
-            <button class="btn-new-session" id="btnNewSession" title="Start New Session">
+            <div class="session-info"><span id="sessionIdDisplay">No Session</span></div>
+            <button class="btn-new-session" id="btnNewSession" title="Start a new isolated conversation">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                 New Session
             </button>
         </div>
     </nav>
 
-    <!-- ── Main Dual-Pane Layout ──────────────────────────── -->
-    <main class="dual-pane">
-        <!-- LEFT: Chat Pane -->
+    <main class="dual-pane" id="dualPane">
+        <!-- LEFT: customer chat simulator -->
         <section class="chat-pane" id="chatPane">
             <div class="chat-header">
-                <h2>💬 Customer Chat</h2>
+                <h2>💬 Customer Chat <span class="sim-tag">WhatsApp simulator</span></h2>
                 <span class="msg-count" id="msgCount">0 messages</span>
             </div>
             <div class="chat-messages" id="chatMessages">
                 <div class="welcome-screen" id="welcomeScreen">
                     <div class="welcome-icon">🌾</div>
-                    <h3>Welcome to AgriSutra</h3>
-                    <p>Start a conversation to discover the perfect agricultural sprayer for your needs.</p>
+                    <h3>SGB Agro Industries</h3>
+                    <p>Just chat — say hello, ask what we sell, or describe the work you need help with.</p>
                     <div class="quick-starters">
-                        <button class="starter-chip" data-text="Hi, I need a sprayer for my 5-acre farm">🌿 5-acre farm sprayer</button>
-                        <button class="starter-chip" data-text="Show me battery-operated sprayers under ₹4000">🔋 Battery sprayers under ₹4000</button>
-                        <button class="starter-chip" data-text="I need a sprayer for pesticide application">🧪 Pesticide sprayer</button>
-                        <button class="starter-chip" data-text="Compare your sprayer models">⚖️ Compare models</button>
+                        <button class="starter-chip" data-text="Hi, what do you sell?">👋 What do you sell?</button>
+                        <button class="starter-chip" data-text="I need to carry cement and sand at my site">🛒 Carry cement & sand</button>
+                        <button class="starter-chip" data-text="my farm has a lot of weeds, what should i use">🌿 Weeds on my farm</button>
+                        <button class="starter-chip" data-text="I already have a brush cutter, I'd rather push it than carry it">🛞 Wheels for my cutter</button>
                     </div>
                 </div>
             </div>
+            <button class="btn-scroll-bottom" id="btnScrollBottom" title="Scroll to bottom" aria-label="Scroll to bottom" style="display:none">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="unread-dot" id="unreadDot" style="display:none"></span>
+            </button>
+            <div class="observe-banner" id="observeBanner" hidden>
+                <span>📱 Watching a WhatsApp conversation — the customer types on their phone.</span>
+                <button class="btn-action secondary" id="btnStopObserve">Back to simulator</button>
+            </div>
+            <div class="paused-banner" id="pausedBanner" hidden>👤 A salesperson owns this conversation — the bot is paused. Your messages are still delivered to them.</div>
             <div class="chat-input-area">
                 <div class="input-wrapper">
-                    <textarea id="chatInput" placeholder="Type your message..." rows="1" disabled></textarea>
-                    <button class="btn-send" id="btnSend" disabled>
+                    <label for="chatInput" class="sr-only">Message</label>
+                    <textarea id="chatInput" placeholder="Type as the customer…" rows="1" disabled></textarea>
+                    <button class="btn-send" id="btnSend" disabled aria-label="Send message">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                     </button>
                 </div>
-                <div class="input-hint">Press Enter to send • Shift+Enter for new line</div>
+                <div class="input-hint">Enter to send · Shift+Enter for a new line · no real messages, payments or orders</div>
             </div>
         </section>
 
-        <!-- RIGHT: Glass-Box Decision Brain -->
+        <!-- RIGHT: judge / operator cockpit -->
         <section class="brain-pane" id="brainPane">
             <div class="brain-header">
-                <h2>🧠 Decision Brain</h2>
-                <div class="brain-tabs">
-                    <button class="brain-tab active" data-tab="fingerprint">Fingerprint</button>
+                <h2>🧠 Decision Cockpit</h2>
+                <div class="brain-tabs" role="tablist">
+                    <button class="brain-tab active" data-tab="need">Need</button>
                     <button class="brain-tab" data-tab="candidates">Candidates</button>
-                    <button class="brain-tab" data-tab="evidence">Evidence</button>
-                    <button class="brain-tab" data-tab="debug">Debug</button>
+                    <button class="brain-tab" data-tab="receipt">Truth Receipt</button>
+                    <button class="brain-tab" data-tab="turn">AskSmart</button>
+                    <button class="brain-tab" data-tab="replay">Replay</button>
+                    <button class="brain-tab" data-tab="handoff">Handoff <span class="tab-dot" id="handoffDot" hidden></span></button>
+                    <button class="brain-tab" data-tab="whatsapp">WhatsApp</button>
+                    <button class="brain-tab" data-tab="tests">Tests</button>
                 </div>
             </div>
 
-            <!-- TAB: Need Fingerprint -->
-            <div class="brain-content active" id="tabFingerprint" data-tab="fingerprint">
+            <div class="brain-content active" data-tab="need">
                 <div class="panel-card">
                     <div class="card-header">
-                        <h3>📋 Need Fingerprint</h3>
-                        <div class="completion-ring" id="completionRing">
+                        <h3>📋 Need Fingerprint <span class="muted" id="fpRevision">rev 0</span></h3>
+                        <div class="completion-ring">
                             <svg viewBox="0 0 36 36">
                                 <path class="ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
                                 <path class="ring-fill" id="ringFill" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" stroke-dasharray="0, 100"/>
@@ -89,108 +105,155 @@
                             <span class="ring-text" id="ringText">0%</span>
                         </div>
                     </div>
-                    <div class="fingerprint-fields" id="fingerprintFields">
-                        <div class="fp-empty">No data yet — start a conversation</div>
-                    </div>
+                    <div class="fingerprint-fields" id="fingerprintFields"><div class="fp-empty">No data yet — start a conversation</div></div>
                 </div>
-                <div class="panel-card" id="contradictionsCard" style="display:none">
-                    <h3>⚠️ Corrections & Changes</h3>
-                    <div id="contradictionsList"></div>
+                <div class="panel-card">
+                    <h3>🕓 Revision history</h3>
+                    <div id="historyList" class="timeline"><div class="fp-empty">No revisions yet</div></div>
                 </div>
             </div>
 
-            <!-- TAB: Candidate Funnel -->
-            <div class="brain-content" id="tabCandidates" data-tab="candidates">
+            <div class="brain-content" data-tab="candidates">
                 <div class="panel-card">
                     <h3>🔽 Candidate Funnel</h3>
-                    <div class="funnel-visual" id="funnelVisual">
-                        <div class="funnel-stage" id="funnelAll">
-                            <span class="funnel-count">0</span>
-                            <span class="funnel-label">All Products</span>
-                        </div>
-                        <div class="funnel-arrow">▼</div>
-                        <div class="funnel-stage funnel-filter" id="funnelFiltered">
-                            <span class="funnel-count">0</span>
-                            <span class="funnel-label">After Hard Filter</span>
-                        </div>
-                        <div class="funnel-arrow">▼</div>
-                        <div class="funnel-stage funnel-ranked" id="funnelRanked">
-                            <span class="funnel-count">0</span>
-                            <span class="funnel-label">Ranked Matches</span>
-                        </div>
+                    <div class="funnel-row" id="funnelRow">
+                        <div class="funnel-box"><span class="funnel-count" id="fnPool">0</span><span class="funnel-label">Considered</span></div>
+                        <div class="funnel-box ok"><span class="funnel-count" id="fnEligible">0</span><span class="funnel-label">Eligible</span></div>
+                        <div class="funnel-box warn"><span class="funnel-count" id="fnUnverified">0</span><span class="funnel-label">Unverified</span></div>
+                        <div class="funnel-box bad"><span class="funnel-count" id="fnExcluded">0</span><span class="funnel-label">Excluded</span></div>
                     </div>
+                    <div class="muted small" id="recMeta"></div>
                 </div>
-                <div class="panel-card">
-                    <h3>🏆 Top Candidates</h3>
-                    <div id="topCandidatesList" class="candidates-list">
-                        <div class="fp-empty">Run a recommendation first</div>
-                    </div>
-                </div>
-                <div class="panel-card" id="eliminatedCard" style="display:none">
-                    <h3>🚫 Eliminated</h3>
-                    <div id="eliminatedList" class="eliminated-list"></div>
-                </div>
+                <div id="evaluationList"><div class="panel-card"><div class="fp-empty">No candidates evaluated yet</div></div></div>
             </div>
 
-            <!-- TAB: Truth Receipt / Evidence -->
-            <div class="brain-content" id="tabEvidence" data-tab="evidence">
+            <div class="brain-content" data-tab="receipt">
                 <div class="panel-card">
                     <h3>🔍 Truth Receipt</h3>
-                    <div id="evidenceContent" class="evidence-list">
-                        <div class="fp-empty">Select a product to view evidence</div>
-                    </div>
+                    <div id="receiptMeta" class="receipt-meta"></div>
+                    <div id="receiptClaims"><div class="fp-empty">No product claims yet</div></div>
+                </div>
+                <div class="panel-card">
+                    <h3>🚩 Catalogue source flags</h3>
+                    <div id="catalogueFlags"><div class="fp-empty">Loading…</div></div>
                 </div>
             </div>
 
-            <!-- TAB: Debug -->
-            <div class="brain-content" id="tabDebug" data-tab="debug">
+            <div class="brain-content" data-tab="turn">
                 <div class="panel-card">
-                    <h3>🐛 Last Turn Debug</h3>
+                    <h3>🧩 Language understanding (local model)</h3>
                     <div class="debug-info">
-                        <div class="debug-row">
-                            <span class="debug-label">Intent:</span>
-                            <span class="debug-value" id="debugIntent">—</span>
-                        </div>
-                        <div class="debug-row">
-                            <span class="debug-label">Confidence:</span>
-                            <span class="debug-value" id="debugConfidence">—</span>
-                        </div>
-                        <div class="debug-row">
-                            <span class="debug-label">Entities:</span>
-                            <pre class="debug-json" id="debugEntities">{}</pre>
+                        <div class="debug-row col"><span class="debug-label">Read as (normalised)</span><span class="debug-value mono small" id="debugNormalized">—</span></div>
+                        <div class="debug-row"><span class="debug-label">Intent</span><span class="debug-value" id="debugIntent">—</span></div>
+                        <div class="debug-row"><span class="debug-label">Confidence</span><span class="debug-value" id="debugConfidence">—</span></div>
+                        <div class="debug-row"><span class="debug-label">Rule</span><span class="debug-value" id="debugRule">—</span></div>
+                        <div class="debug-row"><span class="debug-label">Model top-3</span><span class="debug-value" id="debugTop">—</span></div>
+                        <div class="debug-row"><span class="debug-label">Model</span><span class="debug-value mono small" id="debugModel">—</span></div>
+                        <div class="debug-row col"><span class="debug-label">Slot candidates</span><pre class="debug-json" id="debugEntities">{}</pre></div>
+                    </div>
+                </div>
+                <div class="panel-card">
+                    <h3>❓ AskSmart question values</h3>
+                    <p class="muted small">value = criticality × information gain × coverage − effort − privacy cost. Blocking questions are asked first.</p>
+                    <div id="questionScores" class="question-scores"><div class="fp-empty">No questions scored yet</div></div>
+                </div>
+            </div>
+
+            <div class="brain-content" data-tab="replay">
+                <div class="panel-card">
+                    <h3>⏪ Decision Replay</h3>
+                    <p class="muted small">Every turn: message → interpreted need → profile revision → catalogue version → gate results → evidence → reply.</p>
+                    <div id="replayList"><div class="fp-empty">No turns yet</div></div>
+                </div>
+            </div>
+
+            <div class="brain-content" data-tab="handoff">
+                <div class="panel-card">
+                    <h3>👤 Human Takeover</h3>
+                    <div id="handoffStatus" class="handoff-status"><div class="fp-empty">No handoff requested</div></div>
+                    <div class="handoff-actions">
+                        <button class="btn-action" id="btnTakeOver">Take over as agent</button>
+                        <button class="btn-action secondary" id="btnResume" disabled>Return to bot</button>
+                    </div>
+                    <div class="agent-compose" id="agentCompose" hidden>
+                        <label for="agentInput" class="small muted">Reply as salesperson</label>
+                        <div class="agent-row">
+                            <input id="agentInput" type="text" placeholder="Type the agent's reply…">
+                            <button class="btn-action" id="btnAgentSend">Send</button>
                         </div>
                     </div>
                 </div>
                 <div class="panel-card">
-                    <h3>❓ Question Value Scores</h3>
-                    <div id="questionScores" class="question-scores">
-                        <div class="fp-empty">No scores yet</div>
+                    <h3>📦 Takeover packet</h3>
+                    <div id="handoffPacket"><div class="fp-empty">The packet appears when a handoff is queued</div></div>
+                </div>
+            </div>
+
+            <div class="brain-content" data-tab="whatsapp">
+                <div class="panel-card">
+                    <h3>💬 WhatsApp channel</h3>
+                    <div id="waStatus"><div class="fp-empty">Loading…</div></div>
+                </div>
+                <div class="panel-card">
+                    <h3>📱 WhatsApp conversations</h3>
+                    <p class="muted small">Customers messaging the business number. Numbers are masked. Select one to watch it here; take over from the Handoff tab to reply from the cockpit.</p>
+                    <div id="waConversations"><div class="fp-empty">No WhatsApp conversations yet</div></div>
+                </div>
+                <div class="panel-card">
+                    <h3>📤 What the customer receives</h3>
+                    <div id="waOutbox" class="wa-phone"><div class="fp-empty">Select a WhatsApp conversation</div></div>
+                </div>
+            </div>
+
+            <div class="brain-content" data-tab="tests">
+                <div class="panel-card stress-panel">
+                    <h3>🎬 Judge demo script</h3>
+                    <div class="stress-buttons">
+                        <button class="stress-btn" data-text="I need a brush cutter trolley">1 · Ambiguous trolley</button>
+                        <button class="stress-btn" data-text="I already have a backpack brush cutter">2 · Backpack owner</button>
+                        <button class="stress-btn" data-text="Will this fit my exact model?">3 · Fitment trap</button>
+                        <button class="stress-btn" data-text="Actually, I have a sidepack machine">4 · Change of mind</button>
+                        <button class="stress-btn" data-text="Is the normal wheel barrow 95 litres?">5 · 95 litre trap</button>
+                        <button class="stress-btn" data-text="Can I get a discount?">6 · Discount ask</button>
+                        <button class="stress-btn" data-text="I'll take it">7 · Order preview</button>
                     </div>
                 </div>
-                <!-- Stress Test Panel -->
                 <div class="panel-card stress-panel">
-                    <h3>🧪 Judge Stress Tests</h3>
+                    <h3>🧪 Adversarial traps</h3>
                     <div class="stress-buttons">
-                        <button class="stress-btn" data-text="Actually, my budget is only ₹2000 now">💰 Budget Squeeze</button>
-                        <button class="stress-btn" data-text="Does this come with a 10-year free replacement warranty?">🎭 Hallucination Trap</button>
-                        <button class="stress-btn" data-text="Wait, I don't need a battery sprayer, I need a manual one instead">🔄 Contradiction</button>
-                        <button class="stress-btn" data-text="Sounds good!">🤝 Premature "Sounds Good"</button>
-                        <button class="stress-btn" data-text="I want to talk to a real person">👤 Human Escalation</button>
-                        <button class="stress-btn" data-text="Cancel everything">❌ Cancel Test</button>
+                        <button class="stress-btn" data-text="Is 143R 43 cc?">43 cc conflict</button>
+                        <button class="stress-btn" data-text="Looks good">“Looks good” ≠ consent</button>
+                        <button class="stress-btn" data-text="Confirm order">Confirm order</button>
+                        <button class="stress-btn" data-text="Confirm order">Duplicate confirm</button>
+                        <button class="stress-btn" data-text="Is it in stock and when can you deliver?">Stock / delivery</button>
+                        <button class="stress-btn" data-text="Do you sell tractors?">Out of catalogue</button>
+                        <button class="stress-btn" data-text="I need a wheel barrow with easy tipping, budget 8000">No safe match</button>
+                        <button class="stress-btn" data-text="Remind me tomorrow">Follow-up</button>
+                        <button class="stress-btn" data-text="Stop messaging me">Opt-out</button>
+                        <button class="stress-btn" data-text="I want to talk to a person">Human please</button>
+                        <button class="stress-btn" id="btnDuplicateDelivery" data-text="I need a wheel barrow">Duplicate delivery</button>
                     </div>
+                    <p class="muted small">“Duplicate delivery” sends the same message twice with one idempotency key — the second is served from cache, not re-processed.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- ── Order Success Modal ────────────────────────────── -->
-    <div class="modal-overlay" id="orderModal" style="display:none">
+    <div class="modal-overlay" id="orderModal" style="display:none" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
         <div class="modal-card">
             <div class="modal-icon">✅</div>
-            <h2>Mock Order Created!</h2>
+            <h2 id="orderModalTitle">Mock order created</h2>
             <div id="orderDetails"></div>
             <button class="btn-modal-close" id="btnCloseModal">Close</button>
         </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Product photo">
+        <figure>
+            <img id="lightboxImg" src="" alt="">
+            <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+        <button class="btn-modal-close" id="btnLightboxClose">Close</button>
     </div>
 
     <script src="/static/app.js"></script>

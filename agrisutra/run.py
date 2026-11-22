@@ -8,6 +8,18 @@ import webbrowser
 import subprocess
 import time
 
+# Ensure UTF-8 output on Windows consoles
+if sys.stdout and hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+if sys.stderr and hasattr(sys.stderr, "reconfigure"):
+    try:
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 def main():
     print("=" * 65)
     print("  🌱 AgriSutra: Evidence-First AI Sales Agent")
@@ -21,6 +33,8 @@ def main():
     try:
         import fastapi
         import uvicorn
+        import sklearn
+        import joblib
         print("  ✓ Dependencies verified.")
     except ImportError:
         print("  ⚠️ Installing required dependencies from requirements.txt...")

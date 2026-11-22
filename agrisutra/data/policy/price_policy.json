@@ -1,0 +1,6 @@
+{
+  "policy_set_id": "sgb-price-policy",
+  "status": "NO_APPROVED_POLICY",
+  "note": "The supplied SGB files contain list prices only: no discount matrix, floor price, validity window or approval limits. DealGuard therefore has no automatic discount authority. Add authorised, effective-dated policy records here only after SGB approves them.",
+  "policies": []
+}

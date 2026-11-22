@@ -1,0 +1,174 @@
+{
+  "method": "oracle customers, one per catalogue product; count questions until one viable candidate remains",
+  "n_targets": 7,
+  "summary": {
+    "asksmart": {
+      "mean_questions": 2.71,
+      "resolved": 7
+    },
+    "fixed_baseline": {
+      "mean_questions": 4.71,
+      "resolved": 7
+    }
+  },
+  "per_target": [
+    {
+      "target": "BCT-SIDE",
+      "asksmart": {
+        "questions": 2,
+        "asked": [
+          "product_family",
+          "trolley_configuration"
+        ],
+        "resolved": true
+      },
+      "fixed_baseline": {
+        "questions": 3,
+        "asked": [
+          "product_family",
+          "need_type",
+          "trolley_configuration"
+        ],
+        "resolved": true
+      }
+    },
+    {
+      "target": "BCT-BACK",
+      "asksmart": {
+        "questions": 2,
+        "asked": [
+          "product_family",
+          "trolley_configuration"
+        ],
+        "resolved": true
+      },
+      "fixed_baseline": {
+        "questions": 3,
+        "asked": [
+          "product_family",
+          "need_type",
+          "trolley_configuration"
+        ],
+        "resolved": true
+      }
+    },
+    {
+      "target": "WB-DUMPER",
+      "asksmart": {
+        "questions": 2,
+        "asked": [
+          "product_family",
+          "dumper_required"
+        ],
+        "resolved": true
+      },
+      "fixed_baseline": {
+        "questions": 4,
+        "asked": [
+          "product_family",
+          "need_type",
+          "trolley_configuration",
+          "dumper_required"
+        ],
+        "resolved": true
+      }
+    },
+    {
+      "target": "WB-NORMAL",
+      "asksmart": {
+        "questions": 3,
+        "asked": [
+          "product_family",
+          "dumper_required",
+          "budget"
+        ],
+        "resolved": true
+      },
+      "fixed_baseline": {
+        "questions": 5,
+        "asked": [
+          "product_family",
+          "need_type",
+          "trolley_configuration",
+          "dumper_required",
+          "budget"
+        ],
+        "resolved": true
+      }
+    },
+    {
+      "target": "VARSHA-TROLLEY",
+      "asksmart": {
+        "questions": 4,
+        "asked": [
+          "product_family",
+          "warranty_min_months",
+          "needs_push_trolley",
+          "budget"
+        ],
+        "resolved": true
+      },
+      "fixed_baseline": {
+        "questions": 5,
+        "asked": [
+          "product_family",
+          "need_type",
+          "trolley_configuration",
+          "dumper_required",
+          "budget"
+        ],
+        "resolved": true
+      }
+    },
+    {
+      "target": "143R-STABLE",
+      "asksmart": {
+        "questions": 4,
+        "asked": [
+          "product_family",
+          "warranty_min_months",
+          "carburetor_preference",
+          "budget"
+        ],
+        "resolved": true
+      },
+      "fixed_baseline": {
+        "questions": 6,
+        "asked": [
+          "product_family",
+          "need_type",
+          "trolley_configuration",
+          "dumper_required",
+          "budget",
+          "needs_push_trolley"
+        ],
+        "resolved": true
+      }
+    },
+    {
+      "target": "143R-WALBRO",
+      "asksmart": {
+        "questions": 2,
+        "asked": [
+          "product_family",
+          "warranty_min_months"
+        ],
+        "resolved": true
+      },
+      "fixed_baseline": {
+        "questions": 7,
+        "asked": [
+          "product_family",
+          "need_type",
+          "trolley_configuration",
+          "dumper_required",
+          "budget",
+          "needs_push_trolley",
+          "warranty_min_months"
+        ],
+        "resolved": true
+      }
+    }
+  ],
+  "caveat": "Simulated with truthful oracle answers over 7 products; not a user study."
+}
